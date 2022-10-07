@@ -20,6 +20,10 @@ export default function PageAcai(){
        else if(!peq && !med && !gra ){
             setResposta('Numero invalido')
         }
+
+        else if(desc > 100){
+            setResposta('Desconto invalido')
+        }
        else
         setResposta('O total é de R$ ' + c)
     }
