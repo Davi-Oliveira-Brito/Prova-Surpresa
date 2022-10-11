@@ -24,15 +24,19 @@ import { useState, useEffect } from 'react'
             calculo = gramas * preco;
         }
         
-        setResposta (calculo.toFixed([2]));
-        
+        setResposta (calculo.toFixed([2]));  
     }
     
+    useEffect(() => {
+        calcgrama();
+    },[gramas, resposta])
+    
     return(
-        <main>
-           <input type="number" placeholder='gramas' value={gramas} onChange={e => setGramas(Number(e.target.value))} /> 
-            <button onClick={calcgrama}>Calcular</button>
-            <p>O total a pagar é R${resposta.replace('.',',')}</p>
+        <main className='pg-calcgramas'>
+
+           <input className='input-gramas' type="number" placeholder='gramas' value={gramas} onChange={e => setGramas(Number(e.target.value))} /> 
+
+            <p className='resp-gramas'>O total a pagar é R${resposta.replace('.',',')}</p>
         </main>
         );
  }

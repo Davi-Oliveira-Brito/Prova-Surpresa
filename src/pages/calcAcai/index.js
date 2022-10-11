@@ -13,13 +13,10 @@ export default function PageAcai(){
         let b = (a / 100) * desc;
         let c = a - b;
        
-        if(peq <= 0 || med <= 0 || gra <= 0){
+        if(peq < 0 || med < 0 || gra < 0){
             setResposta('Numero invalido')
-        }
-        
-       else if(!peq && !med && !gra ){
-            setResposta('Numero invalido')
-        }
+        } 
+
 
         else if(desc > 100){
             setResposta('Desconto invalido')
