@@ -9,6 +9,9 @@ import Acai from './pages/calcAcai/index.js'
 import Salario from './pages/calcSal/index.js'
 import Paradas from './pages/qtdParadas/index.js'
 import Temperatura from './pages/Temperatuta/index.js'
+import Orcamento from './pages/orcamento/index.js'
+import Ingresso from './pages/ingresso/index.js'
+
 
 export default function Paths() {
   return (
@@ -21,8 +24,9 @@ export default function Paths() {
             <Route exact path="/salario" element={< Salario/>}></Route>
             <Route exact path="/paradas" element={< Paradas/>}></Route>
             <Route exact path="/temperatura" element={< Temperatura/>}></Route>
+            <Route exact path="/orcamento" element={< Orcamento/>}></Route>
+            <Route exact path="/ingresso" element={< Ingresso/>}></Route>
             
-        
         </Routes>
     </BrowserRouter>
   )
