@@ -15,7 +15,11 @@ export default function Ingresso() {
         try {
             let total = 0;
 
-            
+            //if (!qtdInteiro || !qtdMeia)
+            //    throw new Error('Ingressos inválidos')
+
+            if (qtdInteiro < 0 || qtdMeia < 0)
+                throw new Error('Ingressos inválidos')
 
             if (nacional === true) {
                 total = (qtdMeia * 5) + (qtdInteiro * 5);
@@ -33,9 +37,10 @@ export default function Ingresso() {
             }
 
 
-        } catch (Err) {
+        } catch (err) {
 
-            
+            console.log(err.message);
+            alert(err.message);
         }
 
     }
