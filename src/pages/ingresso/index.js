@@ -12,22 +12,34 @@ export default function Ingresso() {
 
     function calcIngresso() {
 
+        try {
+            let total = 0;
 
-        let total = 0;
-        if (nacional === true) {
-            total = (qtdMeia * 5) + (qtdInteiro * 5);
-            setResposta(' O total a se pagar é de R$ ' + total + ' !!!!!')
-        }
-        else if (dia === "QUARTA-FEIRA") {
-            total = (qtdMeia * 14.25) + (qtdInteiro * 14.25)
-            setResposta(' O total a se pagar é de R$ ' + total + ' !!!!!')
-        }
-        else {
-            total = (qtdInteiro * 28.50) + (qtdMeia * 14.25)
-            setResposta(' O total a se pagar é de R$ ' + total + ' !!!!!')
+            
+
+            if (nacional === true) {
+                total = (qtdMeia * 5) + (qtdInteiro * 5);
+                setResposta(' O total a se pagar é de R$ ' + total + ' !!!!!')
+            }
+
+            else if (dia === "QUARTA-FEIRA") {
+                total = (qtdMeia * 14.25) + (qtdInteiro * 14.25)
+                setResposta(' O total a se pagar é de R$ ' + total + ' !!!!!')
+            }
+
+            else {
+                total = (qtdInteiro * 28.50) + (qtdMeia * 14.25)
+                setResposta(' O total a se pagar é de R$ ' + total + ' !!!!!')
+            }
+
+
+        } catch (Err) {
+
+            
         }
 
     }
+
 
 
     return (
@@ -35,20 +47,20 @@ export default function Ingresso() {
         <main className='main'>
             <label className='label-s' >Inteiras</label>
 
-            <input  type="text" placeholder='Quantidade de inteiras' className='input-int' value={qtdInteiro} onChange={e => setQtdInteiro(Number(e.target.value))}/>
+            <input type="number" placeholder='Quantidade de inteiras' className='input-int' value={qtdInteiro} onChange={e => setQtdInteiro(Number(e.target.value))} />
 
             <label className='label-s'>Meias</label>
 
-            <input type="text" placeholder='Quantidade de meias' className='input-meia' value={qtdMeia} onChange={e => setQtdMeia(Number(e.target.value))} />
+            <input type="number" placeholder='Quantidade de meias' className='input-meia' value={qtdMeia} onChange={e => setQtdMeia(Number(e.target.value))} />
 
             <label className='label-s'>Dia da Semana</label>
 
             <input type="text" placeholder='Dia da Semana' className='input-dia' value={dia} onChange={e => setDia(e.target.value)} />
 
             <div className="nacionalismo">
-            <label className='label-s'>Filme nacional</label>
+                <label className='label-s'>Filme nacional</label>
 
-            <input type="checkbox" className='input-nacional' checked={nacional} onChange={e => setNacional(e.target.checked)} />
+                <input type="checkbox" className='input-nacional' checked={nacional} onChange={e => setNacional(e.target.checked)} />
             </div>
 
             <button className='botao' onClick={calcIngresso}> Calcular</button>
