@@ -33,23 +33,25 @@ export default function Ingresso() {
     return (
 
         <main className='main'>
-            <label>Inteiras</label>
+            <label className='label-s' >Inteiras</label>
 
-            <input type="text" placeholder='Quantidade de inteiras' className='input-int' value={qtdInteiro} onChange={e => setQtdInteiro(Number(e.target.value))}/>
+            <input  type="text" placeholder='Quantidade de inteiras' className='input-int' value={qtdInteiro} onChange={e => setQtdInteiro(Number(e.target.value))}/>
 
-            <label>Meias</label>
+            <label className='label-s'>Meias</label>
 
-            <input type="text" placeholder='Quantidade de meias' value={qtdMeia} onChange={e => setQtdMeia(Number(e.target.value))} />
+            <input type="text" placeholder='Quantidade de meias' className='input-meia' value={qtdMeia} onChange={e => setQtdMeia(Number(e.target.value))} />
 
-            <label>Dia da Semana</label>
+            <label className='label-s'>Dia da Semana</label>
 
-            <input type="text" placeholder='Dia da Semana' value={dia} onChange={e => setDia(e.target.value)} />
+            <input type="text" placeholder='Dia da Semana' className='input-dia' value={dia} onChange={e => setDia(e.target.value)} />
 
-            <label>Filme nacional</label>
+            <div className="nacionalismo">
+            <label className='label-s'>Filme nacional</label>
 
-            <input type="checkbox" checked={nacional} onChange={e => setNacional(e.target.checked)} />
+            <input type="checkbox" className='input-nacional' checked={nacional} onChange={e => setNacional(e.target.checked)} />
+            </div>
 
-            <button onClick={calcIngresso}> Calcular</button>
+            <button className='botao' onClick={calcIngresso}> Calcular</button>
 
             <p>{resposta}</p>
         </main>

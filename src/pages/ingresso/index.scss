@@ -1,4 +1,34 @@
 .main{
+    
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#1e90ff;
+
+
+    .label-s{
+        font-family: century;
+        color: #FFFFFF;
+        font-weight: 500;
+    }
+    .input-int{
+        width: 300px;
+    }
+    .input-meia{
+        width: 300px;
+    }
+    .input-dia{
+        width: 180px;
+    }
+
+    .botao{
+        height: 3em;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        width: 6em;
+        border: none;
+        background: #ff6b81;
+        color: #000000;
+    }
+    
 }
