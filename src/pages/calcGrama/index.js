@@ -25,6 +25,7 @@ import { useState, useEffect } from 'react'
         }
         
         setResposta (calculo.toFixed([2]));  
+        console.log(setResposta)
     }
     
     useEffect(() => {

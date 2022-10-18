@@ -11,7 +11,8 @@ import Paradas from './pages/qtdParadas/index.js'
 import Temperatura from './pages/Temperatuta/index.js'
 import Orcamento from './pages/orcamento/index.js'
 import Ingresso from './pages/ingresso/index.js'
-
+import Contagem from './pages/Contangem/index.js'
+import Linha from './pages/LinhaAst/index.js'
 
 export default function Paths() {
   return (
@@ -26,6 +27,8 @@ export default function Paths() {
             <Route exact path="/temperatura" element={< Temperatura/>}></Route>
             <Route exact path="/orcamento" element={< Orcamento/>}></Route>
             <Route exact path="/ingresso" element={< Ingresso/>}></Route>
+            <Route exact path="/contagem" element={< Contagem/>}></Route>
+            <Route exact path="/linha" element={< Linha/>}></Route>
             
         </Routes>
     </BrowserRouter>
