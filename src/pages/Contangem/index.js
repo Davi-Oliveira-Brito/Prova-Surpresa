@@ -28,7 +28,7 @@ const [resposta, setResposta] = useState([]);
                 <input type="text" placeholder='Inicio' value={inicio} onChange={ e => setInicio(Number(e.target.value))} />
                 <input type="text" placeholder='Fim' value={fim} onChange={ e => setFim(Number(e.target.value))} />
                 <button onClick={CalcContagem}> Contar </button>
-                <p>{resposta}</p>
+                <p>{resposta.map(item => <p>{ item }</p>)}</p>
             </div>
         </main>
 

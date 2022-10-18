@@ -13,6 +13,7 @@ import Orcamento from './pages/orcamento/index.js'
 import Ingresso from './pages/ingresso/index.js'
 import Contagem from './pages/Contangem/index.js'
 import Linha from './pages/LinhaAst/index.js'
+import Forma from './pages/Forma/index.js'
 
 export default function Paths() {
   return (
@@ -29,6 +30,7 @@ export default function Paths() {
             <Route exact path="/ingresso" element={< Ingresso/>}></Route>
             <Route exact path="/contagem" element={< Contagem/>}></Route>
             <Route exact path="/linha" element={< Linha/>}></Route>
+            <Route exact path="/forma" element={< Forma/>}></Route>
             
         </Routes>
     </BrowserRouter>

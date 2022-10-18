@@ -15,6 +15,7 @@ import { Link } from 'react-router-dom'
                 <Link className='text' to= '/temperatura' > Função das temperatura </Link>
                 <Link className='text' to= '/contagem' > Função das Contagem </Link>
                 <Link className='text' to= '/linha' > Função da Linha </Link>
+                <Link className='text' to= '/forma' > Função da forma </Link>
             </div>
 
         </main>
