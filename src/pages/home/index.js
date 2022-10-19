@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
  
  export default function(){
     return (
-        <main className='mamae'>
+        <main className='home'>
             <div className='link-s'>
                 <Link className='text' to= '/signo' > Função Signo</Link>
                 <Link className='text' to= '/grama' > Função Grama</Link>
@@ -16,6 +16,7 @@ import { Link } from 'react-router-dom'
                 <Link className='text' to= '/contagem' > Função das Contagem </Link>
                 <Link className='text' to= '/linha' > Função da Linha </Link>
                 <Link className='text' to= '/forma' > Função da forma </Link>
+                <Link className='text' to= '/cafe' > Função do cafe </Link>
             </div>
 
         </main>
