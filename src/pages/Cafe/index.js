@@ -2,30 +2,27 @@ import './index.scss'
 import { useState } from 'react'
 
 export default function CalcularCafé(){
-    const [n, setN] = useState(0);
-    const [capacidade, setCapacidade] = useState(0);
-    const [d, setD] = useState(0);
+    const [alunos, setAlunos] = useState(0);
+    const [capacidadeInicial, setCapacidadeInicial] = useState(0);
+    const [consumo, setConsumo] = useState(0);
     const [resposta, setResposta] = useState(0);
-
     function click() {
-        let coffeNecessario  = (d * n) / 1000;
-        let minnimo = capacidade;
+        let convesao = alunos * consumo;
+        let coffeNecessario = convesao / 1000;
+        let poscapacidade = capacidadeInicial;
+         while( coffeNecessario > capacidadeInicial){
+            poscapacidade = poscapacidade + capacidadeInicial;
 
-        while(coffeNecessario > capacidade){
-            coffeNecessario = minnimo+=minnimo;
-            setResposta(coffeNecessario);
-            console.log(coffeNecessario)
+         }
+         console.log(poscapacidade)
+        
         }
-        setResposta(coffeNecessario);
-    }
-
-
 
     return(
         <main className='café'>
-              <input type="text" placeholder='alunos' value={n}  onChange={ e => setN(Number(e.target.value))} />
-              <input type="text" placeholder='Capacidade' value={capacidade}  onChange={ e => setCapacidade(Number(e.target.value))} />
-              <input type="text" placeholder='ML' value={d}  onChange={ e => setD(Number(e.target.value))} />
+              <input type="text" placeholder='alunos' value={alunos}  onChange={ e => setAlunos(Number(e.target.value))} />
+              <input type="text" placeholder='CapacidadeInicial' value={capacidadeInicial}  onChange={ e => setCapacidadeInicial(Number(e.target.value))} />
+              <input type="text" placeholder='ML' value={consumo}  onChange={ e => setConsumo(Number(e.target.value))} />
               <button onClick={() => click()} >Calcular</button>
               <p>{resposta}</p>
         </main>
