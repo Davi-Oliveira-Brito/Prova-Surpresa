@@ -1,22 +1,26 @@
-import { Link } from 'react-router-dom' 
+
  import './index.scss'
- 
+ import { useNavigate } from 'react-router-dom';
+
  export default function(){
+    const Navigate = useNavigate();
+
     return (
         <main className='home'>
             <div className='link-s'>
-                <Link className='text' to= '/signo' > Função Signo</Link>
-                <Link className='text' to= '/grama' > Função Grama</Link>
-                <Link className='text' to= '/acai' > Função Açai</Link>
-                <Link className='text' to= '/salario' > Função Salario</Link>
-                <Link className='text' to= '/orcamento' > Função Orçamento</Link>
-                <Link className='text' to= '/ingresso' > Função do Ingresso </Link>
-                <Link className='text' to= '/paradas' > Função das paradas </Link>
-                <Link className='text' to= '/temperatura' > Função das temperatura </Link>
-                <Link className='text' to= '/contagem' > Função das Contagem </Link>
-                <Link className='text' to= '/linha' > Função da Linha </Link>
-                <Link className='text' to= '/forma' > Função da forma </Link>
-                <Link className='text' to= '/cafe' > Função do cafe </Link>
+                <p className='text' onClick={() => Navigate('/signo')} > Função Signo</p>
+                <p className='text' onClick={() => Navigate('/grama')} > Função Grama</p>
+                <p className='text' onClick={() => Navigate('/acai')} > Função Açai</p>
+                <p className='text' onClick={() => Navigate('/salario')} > Função Salario</p>
+                <p className='text' onClick={() => Navigate('/orcamento')} > Função Orçamento</p>
+                <p className='text' onClick={() => Navigate('/ingresso')}> Função do Ingresso </p>
+                <p className='text' onClick={() => Navigate('/paradas')} > Função das paradas </p>
+                <p className='text' onClick={() => Navigate('/temperatura')} > Função das temperatura </p>
+                <p className='text' onClick={() => Navigate('/contagem')} > Função das Contagem </p>
+                <p className='text' onClick={() => Navigate('/linha')} > Função da Linha </p>
+                <p className='text' onClick={() => Navigate('/forma')} > Função da forma </p>
+                <p className='text' onClick={() => Navigate('/cafe')}  > Função do cafe </p>
+                <p className='text' onClick={() => Navigate('/qtdAlunos')} > Função dos Alunos </p>
             </div>
 
         </main>
