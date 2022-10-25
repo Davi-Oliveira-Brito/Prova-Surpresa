@@ -16,6 +16,7 @@ import Linha from './pages/LinhaAst/index.js'
 import Forma from './pages/Forma/index.js'
 import Cafe from './pages/Cafe/index.js'
 import PageAlunos from './pages/QtdAlunos/index.js'
+import PageJuros from './pages/jurosCompostos/index.js'
 
 export default function Paths() {
   return (
@@ -35,7 +36,7 @@ export default function Paths() {
             <Route exact path="/forma" element={< Forma/>}></Route>
             <Route exact path="/cafe" element={< Cafe/>}></Route>
             <Route exact path="/qtdAlunos" element={< PageAlunos/>}></Route>
-            
+            <Route exact path="/juros" element={< PageJuros/>}></Route>
         </Routes>
     </BrowserRouter>
   )
